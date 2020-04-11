@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="../css/upload.css">
+    <script>
+
+        function xmTanUploadImg(obj) {
+            document.getElementById("uploadWord").style.display="none";
+            var file = obj.files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+                var img = document.getElementById("selectImg");
+                img.src = e.target.result;
+            };
+        }
+    </script>
+
+</head>
+<body>
+
+<div class="top">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li id="myAccount"><a href="#">My Account</a>
+            <ul class="dropDown">
+                <li id="upload"><a href="upload.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload</a></li>
+                <li id="photos"><a href="myphoto.html"><i class="fa fa-star" aria-hidden="true"></i></i>My Photos</a></li>
+                <li id="favor"><a href="myfavor.html"><i class="fa fa-heart" aria-hidden="true"></i>My Favor</a></li>
+                <li id="logIn"><a href="../index.html"><i class="fa fa-sign-in" aria-hidden="true"></i>Log in</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="uploadItem">
+    <p class="uploadTitle">Upload</p>
+    <table>
+        <tr>
+            <td class="uploadContent">
+                <form action="" enctype="multipart/form-data">
+                    <input type="file" id="uploadImg"  onchange="xmTanUploadImg(this)">
+                    <img src="" alt="" id="selectImg">
+                </form>
+                <p id="uploadWord">Picture not uploaded</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="#" method="get">
+                    <p class="radioStyle">Pictures Title:<p>
+                    <input type="text" name="Title" class="uploadLine"><br>
+                    <p class="radioStyle">Pictures Description:</p>
+                    <textarea type="text" name="Description" class="uploadParag"></textarea><br>
+                    <p class="radioStyle">Pictures Title:</p>
+                    <input type="text" name="Title" class="uploadLine"><br>
+                    <p class="radioStyle">Pictures Title:</p>
+                    <input type="text" name="Title" class="uploadLine"><br>
+                </form>
+                <a href="myphoto.html"><button class="uploadButton" onclick="alert('Upload Successfully!')">Submit</button></a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+
+</div>
+
+</body>
+<footer>
+    <div>
+        <div>
+            <p>使用条款</p><br>
+            <p>隐私保护</p><br>
+            <p>Cookie</p>
+        </div>
+        <div>
+            <p>关于</p><br>
+            <P>联系我们</P><br>
+        </div>
+        <div>
+            <p>Copyright &copy 2019-2021 GaoXiangxing </p><br>
+            <p>All rights reserved.</p><br>
+            <p> 备案号：17300290033</p>
+        </div>
+        <div>
+            <p>
+                <img id="wechat" src="../images/background/WechatID.jpg" />
+            </p>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse</title>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="../css/browse.css">
+    <script>
+        function linkage(){
+            var coun= document.getElementById("country");
+            var city= document.getElementById("city");
+            city.options.length=0;
+            if(coun.selectedIndex==1){
+                city.options.add(new Option("Shanghai","0"));
+                city.options.add(new Option("Beijing","1"));
+                city.options.add(new Option("Kunming","2"));
+                city.options.add(new Option("Yantai","3"));
+            }
+            if(coun.selectedIndex==2){
+                city.options.add(new Option("Roma"));
+                city.options.add(new Option("Milan"));
+                city.options.add(new Option("Venice"));
+                city.options.add(new Option("Florence"));
+            }
+            if(coun.selectedIndex==3){
+                city.options.add(new Option("New York"));
+                city.options.add(new Option("San Francisco"));
+                city.options.add(new Option("Washington"));
+            }
+            if(coun.selectedIndex==4){
+                city.options.add(new Option("Tokyo"));
+                city.options.add(new Option("Osaka"));
+                city.options.add(new Option("Kamakura"));
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="top">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="browse.html" id="clickNow">Browse</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li id="myAccount"><a href="#">My Account</a>
+            <ul class="dropDown">
+                <li id="upload"><a href="upload.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload</a></li>
+                <li id="photos"><a href="myphoto.html"><i class="fa fa-star" aria-hidden="true"></i></i>My Photos</a></li>
+                <li id="favor"><a href="myfavor.html"><i class="fa fa-heart" aria-hidden="true"></i>My Favor</a></li>
+                <li id="logIn"><a href="../index.html"><i class="fa fa-sign-in" aria-hidden="true"></i>Log in</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<section>
+    <div class="leftColumn">
+        <div class="sideSearch">
+            <p class="searchTitle">Search By Title</p>
+            <form action="#" method="get" name="searchTitle" >
+                <input type="search" name="searchContent">
+                <input type="submit" name="searchSubmit" value="Search" onclick="alert('Search Successfully!')">
+            </form>
+        </div>
+
+        <div class="hotCountry">
+            <p>Hot Country</p>
+            <table>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">China</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Japan</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Italy</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">America</a></th></tr>
+            </table>
+        </div>
+        <div class="hotCity">
+            <p> Hot City</p>
+            <table>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Shanghai</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Beijing</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">New York</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Roma</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Tokyo</a></th></tr>
+            </table>
+        </div>
+        <div class="hotContent">
+            <p> Hot Content</p>
+            <table>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Scenery</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Building</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">People</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Animal</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Wonder</a></th></tr>
+                <tr><th><a href="#" onclick="alert('Screen Successfully!')">Sea</a></th></tr>
+            </table>
+        </div>
+
+    </div>
+
+<div id="Filter">
+    <table>
+        <tr>
+            <th class="filterTitle">FILTER</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="formSelect">
+                    <form>
+                        <select>
+                            <option>Scenery</option>
+                            <option>Building</option>
+                            <option>People</option>
+                        </select>
+                        <select id="country" name="countrySelected" onchange="linkage()">
+                            <option selected="selected" value=""disabled selected hidden>Country</option>
+                            <option>China</option>
+                            <option>Italy</option>
+                            <option>America</option>
+                            <option>Japan</option>
+                        </select>
+                        <select  id="city" name="citySelected">
+                            <option  disabled selected hidden>City</option>
+                        </select>
+                        <button class="filterButton">Filter</button>
+                    </form>
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pictures">
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/9494472443.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/6114907897.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/6592294487.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/8152020963.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/8710289254.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/8645912379.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/9493997865.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/8710320515.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/8731523536.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/9494464567.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/9496787858.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/9495571869.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/9496799098.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/5857398054.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/9505897492.jpg"/></a>
+                    <a href="../src/photodetails.html"><img class="picture1" src="../images/normal/medium/9502741759.jpg"/></a>
+                </div>
+                <div class="bottom">
+                    <a href="#">&#60</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">&#62</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</div>
+</section>
+</body>
+<footer>
+    <div>
+        <div>
+            <p>使用条款</p><br>
+            <p>隐私保护</p><br>
+            <p>Cookie</p>
+        </div>
+        <div>
+            <p>关于</p><br>
+            <P>联系我们</P><br>
+        </div>
+        <div>
+            <p>Copyright &copy 2019-2021 GaoXiangxing </p><br>
+            <p>All rights reserved.</p><br>
+            <p> 备案号：17300290033</p>
+        </div>
+        <div>
+            <p>
+                <img id="wechat" src="../images/background/WechatID.jpg" />
+            </p>
+        </div>
+    </div>
+</footer>
+
+</html>
